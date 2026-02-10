@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>San Valentín 💖</title>
+  <title>San Valentín mi Shermie 💖</title>
 
   <style>
     body {
@@ -62,6 +62,12 @@
       background: #ccc;
     }
 
+    .musicBtn {
+      margin-top: 10px;
+      background: #ffb6c1;
+      color: white;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -86,12 +92,17 @@
 
 <body>
 
+  <!-- 🎶 MÚSICA DE FONDO -->
+  <audio id="music" loop>
+    <source src="lamasbella.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="card" id="card">
     <div class="heart">💖🐱</div>
 
     <h1>
       ¿Quieres ser mi San Valentín,<br>
-      Alexandra Puruguay Salinas?
+      Shermie Burbano Morales?
     </h1>
 
     <div class="buttons">
@@ -99,22 +110,32 @@
       <button id="noBtn" onclick="sayNo()">No 😢</button>
     </div>
 
+    <!-- BOTÓN PARA ACTIVAR MÚSICA -->
+    <button class="musicBtn" onclick="playMusic()">🎵 Activar música</button>
+
     <div class="gallery">
-      <img src="Alexandra1.jpeg">
-      <img src="Alexandra3.jpeg">
-      <img src="Alexandra4.jpeg">
-      <img src="Alexandra5.jpeg">
+      <img src="sher1.jpeg">
+      <img src="sher2.jpeg">
+      <img src="sher3.jpeg">
+      <img src="sher4.jpeg">
+      <img src="sher5.jpeg">
+      <img src="sher6.jpeg">
     </div>
   </div>
 
   <script>
     let noCount = 0;
 
+    function playMusic() {
+      document.getElementById("music").play();
+    }
+
     function sayYes() {
+      document.getElementById("music").play();
       document.getElementById("card").innerHTML = `
         <div class="heart">💘🐱</div>
         <h1>¡Sabía que dirías que SÍ! 😍</h1>
-        <p>Gracias por hacerme la persona más feliz 💖</p>
+        <p>Ahora esta canción es solo para nosotros 💖</p>
       `;
     }
 
@@ -136,6 +157,4 @@
   </script>
 
 </body>
-</html>
-
 </html>
